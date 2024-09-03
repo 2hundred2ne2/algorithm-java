@@ -35,7 +35,7 @@ public class Main {
 
         if( size%2 == 0){
             while (test.length() == 0){
-                stackL.push(test.substring(1).toStrinting);
+                //stackL.push(test.substring(1).toString);
             }
 
 
