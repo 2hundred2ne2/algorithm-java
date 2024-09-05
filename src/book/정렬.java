@@ -1,8 +1,7 @@
 package book;
 
 import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.*;
 
 public class 정렬 {
     public static void main(String[] args) {
@@ -27,13 +26,17 @@ public class 정렬 {
         long s2 = solution53_1(118372);
         System.out.println(s2);
 
-        */
+
 
         int[] array = {1,5,2,6,3,7,4};
         int[][] commend ={{2,5,3},{4,4,1},{1,7,3}};
 
 int[] result = solution54(array,commend);
         System.out.println(result);
+
+ */
+        int[] test ={3,30,34,5,9,0};
+    solution55(test);
     }
 
     /** 계수의 정렬 구하기
@@ -190,5 +193,35 @@ int[] result = solution54(array,commend);
         System.out.println(Arrays.toString(answer));
         return answer;
     }
+    /**가장 큰 수
+    * numbers [6,10,2]
+     * return 6210
+     * 배열의 수를 조합하여 가장 큰 수 만들기
+     *
+    * */
+    private static String solution55(int[] numbers){
+        // 문자열로 변경하기
+        List<String> strings =new ArrayList<>();
+        for (int num : numbers) {
+            strings.add(String.valueOf(num));
+        }
+        System.out.println(Arrays.toString(strings.toArray()));
+        //정렬
+        strings.sort((o2, o1) -> {
+            int a = Integer.parseInt(o1+o2);
+            int b = Integer.parseInt(o2+o1);
+            return Integer.compare(a,b);
+        });
+
+        System.out.println(Arrays.toString(strings.toArray()));
+//문자로 변경
+        StringBuffer sb= new StringBuffer();
+     for(String s:strings){
+         sb.append(s);
+     }
+        System.out.println(sb);
+        return sb.toString();
+    }
+
 
 }
