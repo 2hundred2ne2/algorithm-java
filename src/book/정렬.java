@@ -137,6 +137,7 @@ int[] result = solution54(array,commend);
         for (String string: digits
         ) {
             System.out.print(string);
+
         }
         System.out.println();
         // 다시 문자로 합침
@@ -189,6 +190,9 @@ int[] result = solution54(array,commend);
                  Arrays.sort(sliceArr);
                  //k 번째 수 찾기
                 answer[i] = sliceArr[k-1];
+
+                int n =123;
+                Integer.toString(123).toCharArray();
         }
         System.out.println(Arrays.toString(answer));
         return answer;
