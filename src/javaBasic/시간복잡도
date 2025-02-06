@@ -1,0 +1,7 @@
+문제 조건:
+p의 길이는 최대 18자리입니다.
+18자리 수는 int 범위(약 ±21억)를 훨씬 넘어가기 때문에 Integer.parseInt()를 사용하면 오버플로우가 발생하여 NumberFormatException이 발생할 수 있습니다.
+해결 방법:
+
+Long.parseLong() 사용:
+18자리 수는 long 타입(약 ±9경) 범위 내에 있기 때문에 Long.parseLong()을 사용하면 문제를 해결할 수 있습니다.
